@@ -1,0 +1,13 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+cat <<EOF
+  _   _   _   _   _   _   _   _   _   _  
+ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ 
+( p | r | e | - | c | o | m | m | i | t )
+ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/
+EOF
+
+echo "Running pre-commit checks... $1"
+
+# pnpm run pre-commit-check $1
