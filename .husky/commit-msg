@@ -1,0 +1,15 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+COMMIT_MSG_FILE=$1
+COMMIT_MSG=$(cat "$COMMIT_MSG_FILE")
+
+PATTERN="^(feat|fix|chore|docs|refactor|test|style|perf):\s.+$"
+
+if ! echo "$COMMIT_MSG" | grep -Pq "$PATTERN"; then
+  echo "❌ Invalid commit message format."
+  echo "✅ Required: action: message"
+  echo "Example: feat: add dark mode support"
+  echo "Allowed actions: feat, fix, chore, docs, refactor, test, style, perf"
+  exit 1
+fi
