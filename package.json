@@ -3,8 +3,8 @@
   "main": "expo-router/entry",
   "version": "1.0.0",
   "lint-staged": {
-    "*.{js,ts,tsx,jsx}": [
-      "p run lint"
+    "*.{ts,tsx,jsx}": [
+      "pnpm run lint"
     ]
   },
   "scripts": {
@@ -14,8 +14,8 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "test": "jest --watchAll",
-    "lint": "expo lint && eslint . --ext .js,.jsx,.ts,.tsx",
-    "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
+    "lint": "eslint '**/*.{jsx,ts,tsx}'",
+    "lint:fix": "eslint '**/*.{jsx,ts,tsx}' --fix",
     "format": "prettier --write .",
     "pre-install": "rm -rf node_modules pnpm-lock.yaml && pnpm install",
     "prepare": "husky install"
@@ -58,7 +58,8 @@
     "@types/react-test-renderer": "^18.3.0",
     "@typescript-eslint/eslint-plugin": "^8.27.0",
     "@typescript-eslint/parser": "^8.27.0",
-    "eslint": "^9.23.0",
+    "eslint": "^8.57.1",
+    "eslint-config-expo": "~8.0.1",
     "eslint-config-prettier": "^10.1.1",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-prettier": "^5.2.3",
