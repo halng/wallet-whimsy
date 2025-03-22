@@ -8,8 +8,7 @@ cat <<EOF
  \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/
 EOF
 
-echo "Running pre-commit checks..."
-commit_message="$(cat "$0")"
+echo "husky prepare commit message, inputs $0 $1 $2 $3"
 
-echo $commit_message
+
 # node ./scripts/pre-commit.js $1
