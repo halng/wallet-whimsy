@@ -8,6 +8,8 @@ cat <<EOF
  \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/
 EOF
 
-echo "Running pre-commit checks... $1"
+echo "Running pre-commit checks..."
+commit_message="$(cat "$0")"
 
-# pnpm run pre-commit-check $1
+echo $commit_message
+# node ./scripts/pre-commit.js $1
