@@ -13,14 +13,12 @@
  * limitations under the License.
  */
 
-import * as React from 'react';
-import renderer from 'react-test-renderer';
+import React from 'react';
+import { render, screen } from '@testing-library/react-native';
 
-import { ThemedText } from '../ThemedText';
+import { ThemedText } from '../../components/ThemedText';
 
 it(`renders correctly`, () => {
-  // eslint-disable-next-line import/no-named-as-default-member
-  const tree = renderer.create(<ThemedText>Snapshot test!</ThemedText>).toJSON();
-
-  expect(tree).toMatchSnapshot();
+  render(<ThemedText />);
+  expect(screen.toJSON()).toMatchSnapshot();
 });
