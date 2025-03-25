@@ -4,11 +4,9 @@
     "strict": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "./*"
-      ]
+      "@/*": ["./*"]
     },
-    "target": "esnext",
+    "target": "es6",
     "module": "commonjs",
     "jsx": "react-native"
   },
@@ -17,6 +15,7 @@
     "**/*.tsx",
     ".expo/types/**/*.ts",
     "expo-env.d.ts",
-    "__tests__/components/ThemedText.test.tsx"
-, "helper/assetsTransformer.js"  ]
+    "__tests__/components/ThemedText.test.tsx",
+    "helper/assetsTransformer.js"
+  ]
 }

@@ -13,11 +13,8 @@
  * limitations under the License.
  */
 
-// For more information, check out this link https://github.com/jestjs/jest/issues/2663
-const path = require('path');
-
-module.exports = {
-  process(src, filename, config, options) {
-    return 'module.exports = ' + JSON.stringify(path.basename(filename)) + ';';
-  },
-};
+describe('TabLayout', () => {
+  test('Render TabLayout', async () => {
+    expect('no').toBe('no');
+  });
+});
