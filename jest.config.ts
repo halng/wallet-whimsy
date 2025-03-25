@@ -20,7 +20,15 @@ const config: Config = {
 
   collectCoverage: true,
 
-  // collectCoverageFrom: undefined,
+  collectCoverageFrom: [
+    '**/*.{ts,tsx,js,jsx}',
+    '!**/coverage/**',
+    '!**/node_modules/**',
+    '!**/babel.config.js',
+    '!**/expo-env.d.ts',
+    '!**/.expo/**',
+    '!**/scripts/**',
+  ],
 
   // The directory where Jest should output its coverage files
   coverageDirectory: '.coverage',
@@ -35,7 +43,14 @@ const config: Config = {
   coverageReporters: ['json', 'text', 'lcov', 'clover'],
 
   // An object that configures minimum threshold enforcement for coverage results
-  // coverageThreshold: undefined,
+  coverageThreshold: {
+    global: {
+      branches: 80,
+      functions: 80,
+      lines: 80,
+      statements: -10,
+    },
+  },
 
   // A path to a custom dependency extractor
   // dependencyExtractor: undefined,

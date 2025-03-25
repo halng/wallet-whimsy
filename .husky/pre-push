@@ -3,11 +3,11 @@
 
 echo "🔍 Running tests before push..."
 # TODO: Replace with test command whenever it is available
-# pnpm run test
+pnpm run test
 
-# if [ $? -ne 0 ]; then
-#   echo "❌ Tests failed. Push aborted."
-#   exit 1
-# fi
+if [ $? -ne 0 ]; then
+  echo "❌ Tests failed. Push aborted."
+  exit 1
+fi
 
 echo "✅ Tests passed. Proceeding with push."
