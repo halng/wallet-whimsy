@@ -21,10 +21,11 @@ const config: Config = {
   collectCoverage: true,
 
   collectCoverageFrom: [
-    '**/*.{ts,tsx,js,jsx}',
+    '**/*.{ts,tsx,jsx}',
     '!**/coverage/**',
     '!**/node_modules/**',
     '!**/babel.config.js',
+    '!**/jest.config.ts',
     '!**/expo-env.d.ts',
     '!**/.expo/**',
     '!**/scripts/**',
