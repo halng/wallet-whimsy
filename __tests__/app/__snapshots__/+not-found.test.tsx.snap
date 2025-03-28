@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App - NotFoundScreen Snapshot test  1`] = `
+<View
+  style={
+    [
+      {
+        "backgroundColor": "#fff",
+      },
+      {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
+        "padding": 20,
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      [
+        {
+          "color": "#11181C",
+        },
+        undefined,
+        {
+          "fontSize": 32,
+          "fontWeight": "bold",
+          "lineHeight": 32,
+        },
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+      ]
+    }
+  >
+    This screen doesn't exist.
+  </Text>
+</View>
+`;
