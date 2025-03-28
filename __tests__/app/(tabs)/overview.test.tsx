@@ -15,30 +15,12 @@
 
 import React from 'react';
 import { render, screen } from '@testing-library/react-native';
-import { useFonts } from 'expo-font';
 
-import RootLayout from '@/app/_layout';
+import OverviewScreen from '@/app/(tabs)/overview';
 
-jest.mock('expo-router', () => ({
-  useRouter: jest.fn(),
-  useSegments: jest.fn(),
-  usePathname: jest.fn(() => '/'),
-  useSearchParams: jest.fn(() => ({})),
-  Stack: {
-    Screen: jest.fn(({ children }) => children),
-  },
-}));
-
-jest.mock('expo-font', () => ({
-  loadAsync: jest.fn(),
-  useFonts: jest.fn(),
-}));
-
-describe('App - RootLayout', () => {
-  test('Snapshot test - The font is not loaded ', async () => {
-    (useFonts as jest.Mock).mockReturnValue([false, false]);
-
-    render(<RootLayout />);
-    expect(screen.toJSON()).toMatchSnapshot();
+describe('OverviewScreen', () => {
+  it('renders the title "Overview"', () => {
+    render(<OverviewScreen />);
+    expect(screen.getByText('Overview')).toBeTruthy();
   });
 });

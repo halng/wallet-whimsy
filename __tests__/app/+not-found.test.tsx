@@ -13,36 +13,25 @@
  * limitations under the License.
  */
 
-// import React from 'react';
-// import { render, screen } from '@testing-library/react-native';
-// import { Stack } from 'expo-router';
-// import { DefaultTheme, ThemeProvider } from '@react-navigation/native';
+import React from 'react';
+import { render, screen } from '@testing-library/react-native';
 
-// import NotFoundScreen from '@/app/+not-found';
+import NotFoundScreen from '@/app/+not-found';
 
-// function NotFoundScreenMock() {
-//   return (
-//     <ThemeProvider value={DefaultTheme}>
-//       <Stack>
-//         <NotFoundScreen />
-//       </Stack>
-//     </ThemeProvider>
-//   );
-// }
-
+jest.mock('expo-router', () => ({
+  Stack: {
+    Screen: jest.fn(({ children }) => children),
+  },
+  Link: jest.fn(({ children }) => children),
+}));
 describe('App - NotFoundScreen', () => {
   test('Snapshot test ', async () => {
-    // render(<NotFoundScreenMock />);
-    // expect(screen.toJSON()).toMatchSnapshot();
-    expect(1).toBe(1);
+    render(<NotFoundScreen />);
+    expect(screen.toJSON()).toMatchSnapshot();
   });
   test('UI should render correctly', () => {
-    // render(<NotFoundScreenMock />);
-    // const msg = screen.getByText('This screen doesn&apos;t exist.');
-    // expect(msg).toBeTruthy();
-
-    // const link = screen.getByText('Go to Home');
-    // expect(link).toBeTruthy();
-    expect(1).toBe(1);
+    render(<NotFoundScreen />);
+    const msg = screen.getByText("This screen doesn't exist.");
+    expect(msg).toBeTruthy();
   });
 });
