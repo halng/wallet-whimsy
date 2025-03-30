@@ -13,35 +13,42 @@
  * limitations under the License.
  */
 
-import { Link, Stack } from 'expo-router';
 import { StyleSheet } from 'react-native';
 
+import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
+import { IconSymbol } from '@/components/ui/IconSymbol';
 
-export default function NotFoundScreen() {
+export default function AccountScreen() {
   return (
-    <>
-      <Stack.Screen options={{ title: 'Oops!' }} />
-      <ThemedView style={styles.container}>
-        <ThemedText type="title">This screen doesn&apos;t exist.</ThemedText>
-        <Link href="/_sitemap" style={styles.link}>
-          <ThemedText type="link">Go to Home</ThemedText>
-        </Link>
+    <ParallaxScrollView
+      headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}
+      headerImage={
+        <IconSymbol
+          size={310}
+          color="#808080"
+          name="chevron.left.forwardslash.chevron.right"
+          style={styles.headerImage}
+        />
+      }
+    >
+      <ThemedView style={styles.titleContainer}>
+        <ThemedText type="title">Account</ThemedText>
       </ThemedView>
-    </>
+    </ParallaxScrollView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: 20,
+  headerImage: {
+    color: '#808080',
+    bottom: -90,
+    left: -35,
+    position: 'absolute',
   },
-  link: {
-    marginTop: 15,
-    paddingVertical: 15,
+  titleContainer: {
+    flexDirection: 'row',
+    gap: 8,
   },
 });
