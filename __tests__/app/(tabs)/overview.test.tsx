@@ -16,11 +16,11 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react-native';
 
-import OverviewScreen from '@/app/(tabs)/overview';
+import HomeScreen from '@/app/(tabs)';
 
 describe('OverviewScreen', () => {
   it('renders the title "Overview"', () => {
-    render(<OverviewScreen />);
+    render(<HomeScreen />);
     expect(screen.getByText('Overview')).toBeTruthy();
   });
 });

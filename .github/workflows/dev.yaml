@@ -1,0 +1,33 @@
+name: PR Code Check
+
+on:
+  pull_request:
+    branches:
+      - dev
+
+jobs:
+  code-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the code
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Set up Node.js (if applicable)
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      # Install dependencies
+      - name: Install dependencies
+        run: npm install
+
+      # Run tests
+      - name: Run tests
+        run: npm test
+
+      # Build the code
+      - name: Build code
+        run: npm run build
