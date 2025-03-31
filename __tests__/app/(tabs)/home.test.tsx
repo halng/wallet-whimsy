@@ -18,9 +18,9 @@ import { render, screen } from '@testing-library/react-native';
 
 import HomeScreen from '@/app/(tabs)';
 
-describe('OverviewScreen', () => {
-  it('renders the title "Overview"', () => {
+describe('HomeScreen', () => {
+  it('renders the title "Home"', () => {
     render(<HomeScreen />);
-    expect(screen.getByText('Overview')).toBeTruthy();
+    expect(screen.getByText('Home')).toBeTruthy();
   });
 });

@@ -1,0 +1,134 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IconSymbol matches snapshot for different icon mappings 1`] = `
+[
+  <ViewManagerAdapter_SymbolModule
+    animated={false}
+    colors={[]}
+    name="chevron.right"
+    resizeMode="scaleAspectFit"
+    style={
+      [
+        {
+          "height": 24,
+          "width": 24,
+        },
+        [
+          {
+            "height": 24,
+            "width": 24,
+          },
+          undefined,
+        ],
+      ]
+    }
+    tintColor="blue"
+    type="monochrome"
+    weight="regular"
+  />,
+  <ViewManagerAdapter_SymbolModule
+    animated={false}
+    colors={[]}
+    name="money.bill.transfer"
+    resizeMode="scaleAspectFit"
+    style={
+      [
+        {
+          "height": 24,
+          "width": 24,
+        },
+        [
+          {
+            "height": 24,
+            "width": 24,
+          },
+          undefined,
+        ],
+      ]
+    }
+    tintColor="green"
+    type="monochrome"
+    weight="regular"
+  />,
+  <ViewManagerAdapter_SymbolModule
+    animated={false}
+    colors={[]}
+    name="account.balance"
+    resizeMode="scaleAspectFit"
+    style={
+      [
+        {
+          "height": 24,
+          "width": 24,
+        },
+        [
+          {
+            "height": 24,
+            "width": 24,
+          },
+          undefined,
+        ],
+      ]
+    }
+    tintColor="purple"
+    type="monochrome"
+    weight="regular"
+  />,
+]
+`;
+
+exports[`IconSymbol matches snapshot with custom size and style 1`] = `
+<ViewManagerAdapter_SymbolModule
+  animated={false}
+  colors={[]}
+  name="paperplane.fill"
+  resizeMode="scaleAspectFit"
+  style={
+    [
+      {
+        "height": 24,
+        "width": 24,
+      },
+      [
+        {
+          "height": 32,
+          "width": 32,
+        },
+        {
+          "marginRight": 10,
+        },
+      ],
+    ]
+  }
+  tintColor="red"
+  type="monochrome"
+  weight="regular"
+/>
+`;
+
+exports[`IconSymbol matches snapshot with default props 1`] = `
+<ViewManagerAdapter_SymbolModule
+  animated={false}
+  colors={[]}
+  name="house.fill"
+  resizeMode="scaleAspectFit"
+  style={
+    [
+      {
+        "height": 24,
+        "width": 24,
+      },
+      [
+        {
+          "height": 24,
+          "width": 24,
+        },
+        undefined,
+      ],
+    ]
+  }
+  tintColor="black"
+  type="monochrome"
+  weight="regular"
+/>
+`;
