@@ -9,7 +9,10 @@
     "target": "es6",
     "module": "commonjs",
     "jsx": "react-native",
-     "esModuleInterop": true
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true
   },
   "include": [
     "**/*.ts",
@@ -17,6 +20,13 @@
     ".expo/types/**/*.ts",
     "expo-env.d.ts",
     "__tests__/components/ThemedText.test.tsx",
-    "helper/assetsTransformer.js"
-, "__tests__/app/(tabs)/home.test.tsx"  ]
+    "helper/assetsTransformer.js",
+    "__tests__/app/(tabs)/home.test.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+    "babel.config.js",
+    "metro.config.js",
+    "jest.config.js"
+  ]
 }
