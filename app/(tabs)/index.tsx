@@ -13,29 +13,34 @@
  * limitations under the License.
  */
 
-import { StyleSheet } from 'react-native';
+import { Image, StyleSheet } from 'react-native';
 
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
-import { IconSymbol } from '@/components/ui/IconSymbol';
+import { AppImages } from '@/assets';
 
-export default function OverviewScreen() {
+export default function HomeScreen() {
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}
       headerImage={
-        <IconSymbol
-          size={310}
-          color="#808080"
-          name="chevron.left.forwardslash.chevron.right"
+        <Image
+          // size={310}
+          // imageStyle={{ height: window.width / 1.2 }}
+          source={AppImages.Login.background}
           style={styles.headerImage}
         />
       }
     >
       <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Overview</ThemedText>
+        <ThemedText type="title">Home</ThemedText>
       </ThemedView>
+      <ThemedText>Portfolio - show bar chars visualization of the money in each account</ThemedText>
+      <ThemedText>Chart - show money tracker visualization such as In/out/Saving/Invest</ThemedText>
+      <ThemedText>
+        Chart - show progress of budget and spending in each category such as Food/Transport
+      </ThemedText>
     </ParallaxScrollView>
   );
 }

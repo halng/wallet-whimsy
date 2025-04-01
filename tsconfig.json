@@ -18,5 +18,5 @@
     "expo-env.d.ts",
     "__tests__/components/ThemedText.test.tsx",
     "helper/assetsTransformer.js"
-  ]
+, "__tests__/app/(tabs)/home.test.tsx"  ]
 }

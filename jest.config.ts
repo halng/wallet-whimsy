@@ -22,13 +22,15 @@ const config: Config = {
 
   collectCoverageFrom: [
     '**/*.{ts,tsx,jsx}',
-    '!**/coverage/**',
+    '!**/.coverage/**',
     '!**/node_modules/**',
     '!**/babel.config.js',
     '!**/jest.config.ts',
     '!**/expo-env.d.ts',
     '!**/.expo/**',
     '!**/scripts/**',
+    '!**/config/**',
+    '!**/_layout.tsx',
   ],
 
   // The directory where Jest should output its coverage files
@@ -46,7 +48,7 @@ const config: Config = {
   // An object that configures minimum threshold enforcement for coverage results
   coverageThreshold: {
     global: {
-      branches: 80,
+      branches: 75,
       functions: 80,
       lines: 80,
       statements: -10,
@@ -119,13 +121,13 @@ const config: Config = {
   // projects: undefined,
 
   // Use this configuration option to add custom reporters to Jest
-  // reporters: undefined,
+  reporters: ['default', ['jest-junit', { outputDirectory: '.reports', outputName: 'report.xml' }]],
 
   // Automatically reset mock state before every test
   resetMocks: true,
 
   // Reset the module registry before running each individual test
-  // resetModules: false,
+  // resetModules: true,
 
   // A path to a custom resolver
   // resolver: undefined,

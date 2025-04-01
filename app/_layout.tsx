@@ -39,8 +39,6 @@ export default function RootLayout() {
     }
   }, [loaded]);
 
-  console.debug('RootLayout: ' + loaded);
-
   if (!loaded) {
     return null;
   }
